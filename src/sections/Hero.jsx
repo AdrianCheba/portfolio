@@ -1,6 +1,19 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown, Github, icons, Linkedin } from "lucide-react";
 import { Button } from "../components/Button";
 import AnimatedButton from "../components/AnimatedButton";
+
+const skills = [
+  "React",
+  "JavaScript",
+  "Node.js",
+  "MongoDB",
+  "TailwindCSS",
+  "C#",
+  "C++",
+  "Unity",
+  "UnrealEngine",
+  "Git",
+];
 
 const Hero = () => {
   return (
@@ -31,7 +44,7 @@ const Hero = () => {
         ))}
       </div>
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
-        <div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="animate-fade-in">
               <span className=" inline-flex items-center gap-2 px-4 py-2 glass text-sm text-primary rounded-full">
@@ -63,8 +76,70 @@ const Hero = () => {
               </Button>
               <AnimatedButton />
             </div>
+            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+              <span className="text-sm text-mute-foreground">Follow: </span>
+              {[
+                { icon: Github, href: "#" },
+                { icon: Linkedin, href: "#" },
+              ].map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="p-2 rounded-full glass  hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                >
+                  {<social.icon className="w-5 h-5" />}
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className="relative animate-fade-in animation-delay-300">
+            <div className=" relative max-w-md mx-auto">
+              <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
+              <div className="relative glass rounded-3xl p-2 glow-border">
+                <img
+                  src="./profile-photo.jpg"
+                  alt="peonek"
+                  className="w-full aspect-4/5 object-cover rounded-2xl"
+                />
+
+                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-3 py-4 animate-float">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span className=" text-sm font-medium">
+                      Avilable for work
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div className="mt-20 animate-fade-in animation-delay-600">
+          <p className="text-sm text-mute-foreground mb-6 text-center">
+            Technologies I work with
+          </p>
+          <div className="relative overflow-hidden">
+            <div className="flex animate-marquee">
+              {[...skills, ...skills].map((skill, index) => (
+                <div key={index} className="flex shrink-0 px-8 py-4">
+                  <span className="text-xl font-semibold text-mute-foreground/50 hover:text-mute-foreground transition-colors">
+                    {skill}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-600">
+        <a
+          href="#about"
+          className=" flex flex-col items-center gap-2 text-mute-foreground hover:text-primary"
+        >
+          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <ChevronDown className="w-6 h-6 animate-bounce" />
+        </a>
       </div>
     </section>
   );

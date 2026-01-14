@@ -1,4 +1,10 @@
-import { ArrowRight, ChevronDown, Github, icons, Linkedin } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronDown,
+  Github,
+  Download,
+  Linkedin,
+} from "lucide-react";
 import { Button } from "../components/Button";
 import AnimatedButton from "../components/AnimatedButton";
 
@@ -74,7 +80,10 @@ const Hero = () => {
               <Button size="lg">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedButton />
+              <AnimatedButton>
+                <Download className="w-5 h-5" />
+                Download CV
+              </AnimatedButton>
             </div>
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-mute-foreground">Follow: </span>

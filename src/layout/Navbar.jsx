@@ -3,9 +3,9 @@ import { Button } from "../components/Button";
 import { useEffect, useState } from "react";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
+  { href: "#about", label: "O mnie" },
+  { href: "#projects", label: "Projekty" },
+  { href: "#experience", label: "Doświadczenie" },
 ];
 
 const Navbar = () => {
@@ -48,8 +48,8 @@ const Navbar = () => {
         </div>
         <div className="hidden md:block">
           <a href="#contact">
-            <Button size="sm" className="cursor-pointer">
-              Contact Me
+            <Button size="sm" className="cursor-pointer uppercase">
+              Kontakt
             </Button>
           </a>
         </div>
@@ -74,7 +74,7 @@ const Navbar = () => {
               </a>
             ))}
             <a href="#contact">
-              <Button className="cursor-pointer">Contact Me</Button>
+              <Button className="cursor-pointer uppercase">Kontakt</Button>
             </a>
           </div>
         </div>

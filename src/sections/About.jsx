@@ -1,10 +1,29 @@
 import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
 
 const highlights = [
-  { icon: Code2, title: "Clean Code", description: "Coś tam coś tam" },
-  { icon: Rocket, title: "Clean Code2", description: "Coś tam coś ta2" },
-  { icon: Users, title: "Clean Code3", description: "Coś tam coś tam3" },
-  { icon: Lightbulb, title: "Clean Code4", description: "Coś tam coś ta4" },
+  {
+    icon: Code2,
+    title: "Skalowalność",
+    description: "Piszę kod, który rośnie razem z Twoim projektem.",
+  },
+  {
+    icon: Rocket,
+    title: "Doświadczenie Interakcji",
+    description:
+      "Dzięki Unity wiem, jak sprawić, by użytkownik czuł aplikację.",
+  },
+  {
+    icon: Users,
+    title: "Bezpieczeństwo Danych",
+    description:
+      "Solidne podstawy w Node, Redis, MongoDB oraz SQL gwarantują stabilny backend.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Szybka Adaptacja",
+    description:
+      "Od C# po React - szybko uczę się nowych narzędzi, by rozwiązywać realne problemy.",
+  },
 ];
 
 const About = () => {
@@ -15,34 +34,37 @@ const About = () => {
           <div className="space-y-8">
             <div className="animate-fade-in">
               <span className="text-secondary-foreground txt-sm font-medium tracking-wide uppercase ">
-                About Me
+                O mnie
               </span>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
               Kilka słów o mnie,{" "}
               <span className="text-foreground font-serif italic font-normal">
-                coś tam coś tam{" "}
+                czyli jak łączę różne światy.{" "}
               </span>
             </h2>
-            <div className="space-y-4 text-mute-foreground animate-fade-in animation-delay-200">
+            <div className="space-y-4 text-mute-foreground animate-fade-in animation-delay-200 text-justify">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                Moja droga z kodem zaczęła się od fundamentów backendowych w
+                Node.js. Choć był to krótki, pozwolił mi on zrozumieć, jak
+                działają serwery i przepływ danych. Następnie na dwa lata
+                zanurzyłem się w świecie Unity. Praca z C# nauczyła mnie
+                dyscypliny w pisaniu wydajnego kodu oraz dbałości o interakcję
+                użytkownika z produktem.
               </p>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                Obecnie moje horyzonty skupione są na ekosystemie Reacta.
+                Wykorzystuję bagaż doświadczeń z gamedevu i backendu, aby
+                budować nowoczesne, skalowalne aplikacje webowe. Szukam wyzwań,
+                gdzie będę mógł wykorzystać swoją wszechstronność — od czystej
+                logiki po dopracowany UI.
               </p>
             </div>
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                "Wierzę, że najlepsze produkty powstają na styku pasji do
+                designu i inżynierskiego podejścia do wydajności."
               </p>
             </div>
           </div>

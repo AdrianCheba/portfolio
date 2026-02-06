@@ -18,13 +18,13 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    label: "Phone",
+    label: "Telefon",
     value: "500733111",
     href: "tel:+48500733111",
   },
   {
     icon: MapPin,
-    label: "Location",
+    label: "Lokalizacja",
     value: "Ostrowiec Świętokrzyski",
     href: "#",
   },
@@ -62,7 +62,7 @@ const Contact = () => {
           email: formData.email,
           message: formData.message,
         },
-        publicKey
+        publicKey,
       );
 
       setSubmitStatus({
@@ -95,15 +95,12 @@ const Contact = () => {
             Get in touch
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Experience that{" "}
+            Jeśli moja kandydatura Cię zainteresowała{" "}
             <span className="font-serif italic font-normal text-white">
               {" "}
-              speaks volumes.
+              odezwij się do mnie.
             </span>
           </h2>
-          <p className="text-mute-foreground animate-fade-in animation-delay-200">
-            Moje doświadczenia
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -114,7 +111,7 @@ const Contact = () => {
                   htmlFor="name"
                   className="block text-sm font-medium mb-2"
                 >
-                  Name
+                  Imie
                 </label>
                 <input
                   id="name"
@@ -152,7 +149,7 @@ const Contact = () => {
                   htmlFor="message"
                   className="block text-sm font-medium mb-2"
                 >
-                  Message
+                  Wiadomość
                 </label>
                 <textarea
                   rows={5}

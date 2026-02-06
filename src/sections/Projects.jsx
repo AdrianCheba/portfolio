@@ -3,24 +3,35 @@ import AnimatedButton from "../components/AnimatedButton";
 
 const projects = [
   {
-    title: "strona1",
-    description: "Opis projektu",
+    title: "Landing Page (Modern UI)",
+    description:
+      "Responsywny landing page, którego głównym celem było stworzenie minimalistycznego, nowoczesnego interfejsu z płynnymi przejściami. Projekt pozwolił mi na perfekcyjne opanowanie utility-first CSS w Tailwindzie.",
     image: "./projects/project1.png",
     tags: ["React", "JavaScript", "TailwindCSS"],
     github: "#",
   },
   {
-    title: "strona2",
-    description: "Opis projektu2",
+    title: "Platforma E-commerce MERN",
+    description:
+      "Pełnofunkcyjna aplikacja typu dashboard do zarządzania asortymentem sklepu. Umożliwia dodawanie nowych produktów z obrazami, dynamiczną edycję cen oraz usuwanie pozycji z bazy w czasie rzeczywistym. Kompletny system CRUD połączony z bazą MongoDB oraz REST API w Node.js.",
     image: "./projects/project2.png",
-    tags: ["React", "JavaScript", "TailwindCSS"],
+    tags: ["MongoDB", "Express.js", "React", "Node.js", "TailwindCSS"],
     github: "#",
   },
   {
-    title: "strona3",
-    description: "Opis projektu3",
-    image: "./projects/project1.png",
-    tags: ["React", "JavaScript", "TailwindCSS"],
+    title: "Real-time Chat App",
+    description:
+      "Zaawansowana aplikacja do komunikacji, stawiająca na szybkość i bezpieczeństwo. Dzięki wykorzystaniu Redisa do cachowania i Pushera do WebSockets, wiadomości docierają do odbiorców natychmiastowo, bez odświeżania strony. Autentykacja przez Kinde, wiadomości w czasie rzeczywistym oraz nowoczesne komponenty UI z biblioteki shadcn.",
+    image: "./projects/project3.png",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Redis",
+      "Pusher",
+      "Kinde",
+      "shadcn/ui",
+      "TailwindCSS",
+    ],
     github: "#",
   },
 ];
@@ -32,19 +43,13 @@ const Projects = () => {
       <div className="absolute bottom-1/4 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mx-auto max-w-3xl mb-16 animate-fade-in animation-delay-100">
-          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Featured Work
-          </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-secondary-foreground">
-            Project
+            Wybrane
             <span className="font-serif italic font-normal text-white">
               {" "}
-              with something
+              projekty
             </span>
           </h2>
-          <p className="text-mute-foreground animate-fade-in animation-delay-200">
-            Wybrane projekty
-          </p>
         </div>
         <div>
           <div className="grid md:grid-cols-2 gap-8">

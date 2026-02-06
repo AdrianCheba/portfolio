@@ -11,11 +11,16 @@ import AnimatedButton from "../components/AnimatedButton";
 const skills = [
   "React",
   "JavaScript",
+  "TypeScript",
   "Node.js",
+  "Next.js",
   "MongoDB",
+  "Redis",
   "TailwindCSS",
+  "shadcn/ui",
   "C#",
   "C++",
+  "SQL",
   "Unity",
   "UnrealEngine",
   "Git",
@@ -55,31 +60,31 @@ const Hero = () => {
             <div className="animate-fade-in">
               <span className=" inline-flex items-center gap-2 px-4 py-2 glass text-sm text-primary rounded-full">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Lorem ipsum
+                Software Developer
               </span>
             </div>
 
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Lorem <span className="text-primary glow-text"> ipsum </span>
+                Od logiki <span className="text-primary glow-text"> gier </span>
                 <br />
-                lorem ipsum
+                po pełny stos
                 <br />
                 <span className="font-serif italic font-normal text-white">
-                  lorem
+                  webowy.
                 </span>
               </h1>
               <p className=" text-lg text-mute-foreground max-w-lg animate-fade-in animation-delay-200">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                Cześć, jestem Adrian. Moja droga prowadziła przez dynamiczny
+                świat Unity i architekturę Node.js, aż do nowoczesnego Reacta.
+                Buduję kompleksowe rozwiązania, gdzie backendowa solidność
+                spotyka frontendową precyzję.
               </p>
             </div>
             <div className=" flex flex-wrap gap-4 animate-fade-in animation-delay-300">
               <a href="#contact">
                 <Button size="lg" className="cursor-pointer">
-                  Contact Me <ArrowRight className="w-5 h-5" />
+                  Kontakt <ArrowRight className="w-5 h-5" />
                 </Button>
               </a>
               <a href="https://drive.google.com/file/d/1v7WrA-EoFG-KM9-ieZ-ZJEG0qFWhnQeH/view?usp=drive_link">
@@ -90,7 +95,7 @@ const Hero = () => {
               </a>
             </div>
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-              <span className="text-sm text-mute-foreground">Follow: </span>
+              <span className="text-sm text-mute-foreground">Sprawdź: </span>
               {[
                 { icon: Github, href: "https://github.com/AdrianCheba" },
                 {
@@ -122,7 +127,7 @@ const Hero = () => {
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                     <span className=" text-sm font-medium">
-                      Avilable for work
+                      Otwarty na propozycje
                     </span>
                   </div>
                 </div>
@@ -132,7 +137,7 @@ const Hero = () => {
         </div>
         <div className="mt-20 animate-fade-in animation-delay-600">
           <p className="text-sm text-mute-foreground mb-6 text-center">
-            Technologies I work with
+            Technologie, z których korzystałem
           </p>
           <div className="relative overflow-hidden">
             <div className="flex animate-marquee">
@@ -153,7 +158,7 @@ const Hero = () => {
           href="#about"
           className=" flex flex-col items-center gap-2 text-mute-foreground hover:text-primary"
         >
-          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <span className="text-xs uppercase tracking-wider">Przewiń</span>
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </a>
       </div>

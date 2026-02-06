@@ -1,29 +1,29 @@
 const experiences = [
   {
-    period: "2023 - 2025 ",
+    period: "Listopad 2023 - Listopad 2025 ",
     role: "Junior Unity Developer",
-    company: "Radosław Kozaczuk",
+    company: "Freelance",
     description:
-      "Wykonywanie zadań do projektu Gardener Tails. Dodawanie nowej zawartości, usuwanie błedów, tworzenie interfejsu użytkownika",
-    technologies: ["Unity", "C#", "Network for GameObject"],
+      "Wykonywałem zadania do gry co-operacyjnej hack-n-slash, projekt był realizowany w Unity w oparciu o HDRP i Netcode for Gameobjects. Głównie zajmowałem się wdrażaniem nowych mechanik, implementacją UI oraz usuwaniem błędów. Podczas pracy korzystałem również z plugin-u DOTween do tworzenia prostych animacji obiektów oraz implementowałem różnego rodzaju efekty wizualne typu Particle System i Shader Graph.",
+    technologies: ["Unity", "C#", "Network for GameObject", "DOTween"],
     current: false,
   },
   {
-    period: "2023 - 2025 ",
-    role: "Junior Unity Developer",
-    company: "Radosław Kozaczuk",
+    period: "Luty 2022 - Maj 2022 ",
+    role: "Junior Node.js Developer",
+    company: "Sagaca",
     description:
-      "Wykonywanie zadań do projektu Gardener Tails. Dodawanie nowej zawartości, usuwanie błedów, tworzenie interfejsu użytkownika",
-    technologies: ["Unity", "C#", "Network for GameObject"],
+      "Praca nad projektami wewnętrznymi przy wykorzystaniu Node.js oraz JavaScript/TypeScript",
+    technologies: ["Node.js", "Express.js", "JavaScript", "TypeScript"],
     current: false,
   },
   {
-    period: "2023 - 2025 ",
-    role: "Junior Unity Developer",
-    company: "Radosław Kozaczuk",
+    period: "Marzec 2020 - Wrzesień 2021 ",
+    role: "Magister Inżynier Informatyki",
+    company: "Politechnika Świętokrzyska w Kielcach",
     description:
-      "Wykonywanie zadań do projektu Gardener Tails. Dodawanie nowej zawartości, usuwanie błedów, tworzenie interfejsu użytkownika",
-    technologies: ["Unity", "C#", "Network for GameObject"],
+      "Moja praca magisterska oraz inżynierska opierały się na aplikacjach mobilnych AR w Unity",
+    technologies: ["Unity", "C#", "Vuforia"],
     current: false,
   },
 ];
@@ -37,13 +37,13 @@ const Experience = () => {
         <div className="max-w-3xl mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
             {" "}
-            Career Journey
+            Podróż zawodowa
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Experience that{" "}
+            Doświadczenie{" "}
             <span className="font-serif italic font-normal text-white">
               {" "}
-              speaks volumes.
+              które mówi samo za siebie.
             </span>
           </h2>
           <p className="text-mute-foreground animate-fade-in animation-delay-200">

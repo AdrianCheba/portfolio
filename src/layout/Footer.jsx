@@ -32,7 +32,7 @@ const Footer = () => {
               <Linkedin className="h-7 w-7" />
             </a>
           </div>
-          <p className="text-sm">&copy; 2026 All rights reserved. </p>
+          <p className="text-sm">&copy; 2026 Wszelkie prawa zastrzeżone. </p>
         </div>
       </div>
     </footer>

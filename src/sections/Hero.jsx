@@ -77,19 +77,26 @@ const Hero = () => {
               </p>
             </div>
             <div className=" flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
-              </Button>
-              <AnimatedButton>
-                <Download className="w-5 h-5" />
-                Download CV
-              </AnimatedButton>
+              <a href="#contact">
+                <Button size="lg" className="cursor-pointer">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
+              <a href="https://drive.google.com/file/d/1v7WrA-EoFG-KM9-ieZ-ZJEG0qFWhnQeH/view?usp=drive_link">
+                <AnimatedButton>
+                  <Download className="w-5 h-5" />
+                  Moje CV
+                </AnimatedButton>
+              </a>
             </div>
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-mute-foreground">Follow: </span>
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
+                { icon: Github, href: "https://github.com/AdrianCheba" },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/adrian-cheba-6a454a265/",
+                },
               ].map((social, index) => (
                 <a
                   key={index}

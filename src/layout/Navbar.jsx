@@ -47,7 +47,11 @@ const Navbar = () => {
           </div>
         </div>
         <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+          <a href="#contact">
+            <Button size="sm" className="cursor-pointer">
+              Contact Me
+            </Button>
+          </a>
         </div>
         <button
           className="md:hidden p-2 text-foreground cursor-pointer"
@@ -69,7 +73,9 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <Button>Contact Me</Button>
+            <a href="#contact">
+              <Button className="cursor-pointer">Contact Me</Button>
+            </a>
           </div>
         </div>
       )}

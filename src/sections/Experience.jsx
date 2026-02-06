@@ -56,7 +56,7 @@ const Experience = () => {
           <div className="space-y-12">
             {experiences.map((experience, index) => (
               <div
-                id={index}
+                key={index}
                 className="relative grid md:grid-cols-2 gap-8 animate-fade-in"
                 style={{ animationDelay: `${(index + 1) * 100}ms` }}
               >

@@ -8,20 +8,20 @@ const projects = [
       "Responsywny landing page, którego głównym celem było stworzenie minimalistycznego, nowoczesnego interfejsu z płynnymi przejściami. Projekt pozwolił mi na perfekcyjne opanowanie utility-first CSS w Tailwindzie.",
     image: "./projects/project1.png",
     tags: ["React", "JavaScript", "TailwindCSS"],
-    github: "#",
+    github: "https://github.com/AdrianCheba/LandingPage",
   },
   {
     title: "Platforma E-commerce MERN",
     description:
-      "Pełnofunkcyjna aplikacja typu dashboard do zarządzania asortymentem sklepu. Umożliwia dodawanie nowych produktów z obrazami, dynamiczną edycję cen oraz usuwanie pozycji z bazy w czasie rzeczywistym. Kompletny system CRUD połączony z bazą MongoDB oraz REST API w Node.js.",
+      "Aplikacja typu dashboard do zarządzania asortymentem sklepu. Umożliwia dodawanie nowych produktów z obrazami, dynamiczną edycję cen oraz usuwanie pozycji z bazy w czasie rzeczywistym. Kompletny system CRUD połączony z bazą MongoDB oraz REST API w Node.js.",
     image: "./projects/project2.png",
     tags: ["MongoDB", "Express.js", "React", "Node.js", "TailwindCSS"],
-    github: "#",
+    github: "https://github.com/AdrianCheba/MERNProductStore",
   },
   {
     title: "Real-time Chat App",
     description:
-      "Zaawansowana aplikacja do komunikacji, stawiająca na szybkość i bezpieczeństwo. Dzięki wykorzystaniu Redisa do cachowania i Pushera do WebSockets, wiadomości docierają do odbiorców natychmiastowo, bez odświeżania strony. Autentykacja przez Kinde, wiadomości w czasie rzeczywistym oraz nowoczesne komponenty UI z biblioteki shadcn.",
+      "Aplikacja do komunikacji, stawiająca na szybkość i bezpieczeństwo. Dzięki wykorzystaniu Redisa do cachowania wiadomości oraz Pusher, wiadomości docierają do odbiorców natychmiastowo, bez odświeżania strony. Autentykacja przez Kinde, wiadomości w czasie rzeczywistym oraz nowoczesne komponenty UI z biblioteki shadcn.",
     image: "./projects/project3.png",
     tags: [
       "Next.js",
@@ -31,8 +31,9 @@ const projects = [
       "Kinde",
       "shadcn/ui",
       "TailwindCSS",
+      "Framer Motion",
     ],
-    github: "#",
+    github: "https://github.com/AdrianCheba/ChatApplication",
   },
 ];
 
@@ -103,10 +104,16 @@ const Projects = () => {
           </div>
         </div>
         <div className="text-center mt-12 animate-fade-in animation-delay-300">
-          <AnimatedButton>
-            Wszystkie Projekty
-            <ArrowUpRight className="w-5 h-5" />
-          </AnimatedButton>
+          <a
+            href="https://github.com/stars/AdrianCheba/lists/web-apps"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AnimatedButton>
+              Wszystkie Projekty
+              <ArrowUpRight className="w-5 h-5" />
+            </AnimatedButton>
+          </a>
         </div>
       </div>
     </section>

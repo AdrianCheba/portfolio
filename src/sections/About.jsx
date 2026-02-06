@@ -57,7 +57,7 @@ const About = () => {
                 Obecnie moje horyzonty skupione są na ekosystemie Reacta.
                 Wykorzystuję bagaż doświadczeń z gamedevu i backendu, aby
                 budować nowoczesne, skalowalne aplikacje webowe. Szukam wyzwań,
-                gdzie będę mógł wykorzystać swoją wszechstronność — od czystej
+                gdzie będę mógł wykorzystać swoją wszechstronność ... od czystej
                 logiki po dopracowany UI.
               </p>
             </div>

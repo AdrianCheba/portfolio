@@ -25,8 +25,8 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Lokalizacja",
-    value: "Ostrowiec Świętokrzyski",
-    href: "#",
+    value: "Praca zdalna / Relokacja",
+    href: "#contact",
   },
 ];
 
@@ -98,7 +98,7 @@ const Contact = () => {
             Jeśli moja kandydatura Cię zainteresowała{" "}
             <span className="font-serif italic font-normal text-white">
               {" "}
-              odezwij się do mnie.
+              odezwij się.
             </span>
           </h2>
         </div>

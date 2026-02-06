@@ -1,5 +1,3 @@
-import { Download } from "lucide-react";
-
 const AnimatedButton = ({ children }) => {
   return (
     <button

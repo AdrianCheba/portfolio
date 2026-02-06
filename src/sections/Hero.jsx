@@ -87,7 +87,11 @@ const Hero = () => {
                   Kontakt <ArrowRight className="w-5 h-5" />
                 </Button>
               </a>
-              <a href="https://drive.google.com/file/d/1v7WrA-EoFG-KM9-ieZ-ZJEG0qFWhnQeH/view?usp=drive_link">
+              <a
+                href="https://drive.google.com/file/d/1v7WrA-EoFG-KM9-ieZ-ZJEG0qFWhnQeH/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <AnimatedButton>
                   <Download className="w-5 h-5" />
                   Moje CV
@@ -127,7 +131,7 @@ const Hero = () => {
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                     <span className=" text-sm font-medium">
-                      Otwarty na propozycje
+                      Otwarty na oferty pracy
                     </span>
                   </div>
                 </div>
@@ -140,7 +144,7 @@ const Hero = () => {
             Technologie, z których korzystałem
           </p>
           <div className="relative overflow-hidden">
-            <div className="flex animate-marquee">
+            <div className="flex w-max animate-marquee">
               {[...skills, ...skills].map((skill, index) => (
                 <div key={index} className="flex shrink-0 px-8 py-4">
                   <span className="text-xl font-semibold text-mute-foreground/50 hover:text-mute-foreground transition-colors">

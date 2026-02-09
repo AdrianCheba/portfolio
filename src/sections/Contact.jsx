@@ -9,6 +9,7 @@ import {
 import { Button } from "../components/Button";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+
 const contactInfo = [
   {
     icon: Mail,
@@ -42,7 +43,6 @@ const Contact = () => {
 
   const handelSubmit = async (e) => {
     e.preventDefault();
-
     setIsLoading(true);
     setSubmitStatus({ type: null, message: "" });
     try {
@@ -51,7 +51,7 @@ const Contact = () => {
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
       if (!serviceId || !templateId || !publicKey) {
-        throw new Error("EmaiJS configuration is missing");
+        throw new Error("EmailJS configuration is missing");
       }
 
       await emailjs.send(
@@ -67,51 +67,49 @@ const Contact = () => {
 
       setSubmitStatus({
         type: "success",
-        message: "Message sent successfully !",
+        message: "Wiadomość wysłana pomyślnie!",
       });
-
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
       console.error("EmailJS error", err);
       setSubmitStatus({
         type: "error",
-        message: err.text || "Failed to send message",
+        message: err.text || "Nie udało się wysłać wiadomości",
       });
     } finally {
       setIsLoading(false);
     }
   };
+
   return (
-    <section className="py-32 relative overflow-hidden" id="contact">
+    <section className="py-20 md:py-32 relative overflow-x-hidden" id="contact">
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 md:w-64 md:h-64 bg-highlight/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-48 h-48 md:w-96 md:h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-32 h-32 md:w-64 md:h-64 bg-highlight/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl mb-16 text-center mx-auto">
-          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            {" "}
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="max-w-3xl mb-12 md:mb-16 text-center mx-auto">
+          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
             Get in touch
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
+          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6 text-secondary-foreground">
             Jeśli moja kandydatura Cię zainteresowała{" "}
             <span className="font-serif italic font-normal text-white">
-              {" "}
               odezwij się.
             </span>
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <div className="glass p-5 sm:p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300 w-full overflow-hidden">
-            <form className="space-y-6" onSubmit={handelSubmit}>
-              <div>
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
+          <div className="glass p-5 sm:p-8 rounded-3xl border border-primary/30 animate-fade-in w-full box-border">
+            <form className="space-y-5 md:space-y-6" onSubmit={handelSubmit}>
+              <div className="w-full">
                 <label
                   htmlFor="name"
                   className="block text-sm font-medium mb-2"
                 >
-                  Imie
+                  Imię
                 </label>
                 <input
                   id="name"
@@ -125,7 +123,7 @@ const Contact = () => {
                   className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                 />
               </div>
-              <div>
+              <div className="w-full">
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium mb-2"
@@ -144,7 +142,7 @@ const Contact = () => {
                   className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                 />
               </div>
-              <div>
+              <div className="w-full">
                 <label
                   htmlFor="message"
                   className="block text-sm font-medium mb-2"
@@ -170,11 +168,11 @@ const Contact = () => {
                 disabled={isLoading}
               >
                 {isLoading ? (
-                  <>Wysyłanie...</>
+                  "Wysyłanie..."
                 ) : (
-                  <>
+                  <span className="flex items-center justify-center gap-2">
                     Wyślij <Send className="w-5 h-5" />
-                  </>
+                  </span>
                 )}
               </Button>
 
@@ -187,9 +185,9 @@ const Contact = () => {
                   }`}
                 >
                   {submitStatus.type === "success" ? (
-                    <CheckCircle className="w-5 h-5 shrink-0" />
+                    <CheckCircle className="w-5 h-5" />
                   ) : (
-                    <AlertCircle className="w-5 h-5 shrink-0 " />
+                    <AlertCircle className="w-5 h-5" />
                   )}
                   <p className="text-sm">{submitStatus.message}</p>
                 </div>
@@ -197,8 +195,8 @@ const Contact = () => {
             </form>
           </div>
 
-          <div className="space-y-6 nimate-fade-in animation-delay-400">
-            <div className="glass rounded-3xl p-8">
+          <div className="space-y-6">
+            <div className="glass rounded-3xl p-6 sm:p-8">
               <h3 className="text-xl font-semibold mb-6">
                 Informacje kontaktowe
               </h3>
@@ -207,29 +205,33 @@ const Contact = () => {
                   <a
                     key={infoIdx}
                     href={item.href}
-                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group "
+                    className="flex items-center gap-4 p-3 sm:p-4 rounded-xl hover:bg-surface transition-colors group"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                       <item.icon className="w-5 h-5 text-primary" />
                     </div>
-                    <div>
-                      <div className="text-sm text-mute-foreground">
+                    <div className="min-w-0 flex-1">
+                      <div className="text-xs sm:text-sm text-mute-foreground">
                         {item.label}
                       </div>
-                      <div className="font-medium">{item.value}</div>
+                      <div className="font-medium truncate text-sm sm:text-base">
+                        {item.value}
+                      </div>
                     </div>
                   </a>
                 ))}
               </div>
             </div>
 
-            <div className="glass rounded-3xl p-8 border border-primary/30">
-              <div className=" flex items-center gap-3 mb-4">
+            <div className="glass rounded-3xl p-6 sm:p-8 border border-primary/30">
+              <div className="flex items-center gap-3 mb-2">
                 <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                <span className=" font-medium">Obecnie dostępny</span>
+                <span className="font-medium text-sm sm:text-base">
+                  Obecnie dostępny
+                </span>
               </div>
-              <p className="text-mute-foreground text-sm">
-                Otwarty na ofery pracy
+              <p className="text-mute-foreground text-xs sm:text-sm">
+                Otwarty na oferty pracy
               </p>
             </div>
           </div>

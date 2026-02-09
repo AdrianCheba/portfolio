@@ -47,7 +47,7 @@ const About = () => {
             <div className="space-y-4 text-mute-foreground animate-fade-in animation-delay-200 text-justify">
               <p>
                 Moja droga z kodem zaczęła się od fundamentów backendowych w
-                Node.js. Choć był to krótki, pozwolił mi on zrozumieć, jak
+                Node.js. Choć był to krótki okres, pozwolił mi on zrozumieć, jak
                 działają serwery i przepływ danych. Następnie na dwa lata
                 zanurzyłem się w świecie Unity. Praca z C# nauczyła mnie
                 dyscypliny w pisaniu wydajnego kodu oraz dbałości o interakcję

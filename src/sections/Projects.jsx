@@ -15,7 +15,14 @@ const projects = [
     description:
       "Aplikacja typu dashboard do zarządzania asortymentem sklepu. Umożliwia dodawanie nowych produktów z obrazami, dynamiczną edycję cen oraz usuwanie pozycji z bazy w czasie rzeczywistym. Kompletny system CRUD połączony z bazą MongoDB oraz REST API w Node.js.",
     image: "./projects/project2.png",
-    tags: ["MongoDB", "Express.js", "React", "Node.js", "TailwindCSS"],
+    tags: [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "JavaScript",
+      "TailwindCSS",
+    ],
     github: "https://github.com/AdrianCheba/MERNProductStore",
   },
   {
@@ -29,6 +36,7 @@ const projects = [
       "Redis",
       "Pusher",
       "Kinde",
+      "Cloudinary",
       "shadcn/ui",
       "TailwindCSS",
       "Framer Motion",

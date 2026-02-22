@@ -15,6 +15,7 @@ const skills = [
   "HTML/CSS",
   "Node.js",
   "Next.js",
+  "PostgreSQL",
   "MongoDB",
   "Redis",
   "TailwindCSS",
